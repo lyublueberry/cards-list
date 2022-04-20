@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>TEST SKYENG</title>
+</head>
+
+<body>
+    <input class="name-parametr" type="text">
+    <button class="btn-send" type="submit">Отправить</button>
+    <main>
+        <section>
+            <header>
+                <ul>
+                    <li>
+                        <a class="russian-teach" href="#">
+                            <img src="./img/ru.svg" alt="icon" width="24px">
+                            <p>Русскоязычный преподаватель</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="english-tech" href="#"><img src="./img/gb.svg" alt="icon" width="24px">
+                            <p>Англоязычный преподаватель</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="premium-tarif" href="#">
+                            <img src="./img/smile.svg" alt="icon" width="24px">
+                            <p>Премиум тариф</p>
+                            <img src="./img/alert.svg" alt="icon" width="24px">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="additional-practice" href="#">
+                            <img src="./img/computer.svg" alt="icon" width="24px">
+                            <p>Дополнительная практика</p>
+                            <img src="./img/alert.svg" alt="icon" width="24px">
+                        </a>
+                    </li>
+                </ul>
+            </header>
+        </section>
+        <section>
+            <div class="main">
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Карточка -->
+    <template id="card">
+        <article class="card-item">
+            <p class="quantity"><span></span>урока</p>
+            <p class="without-discount"><span>p</span></p>
+            <p class="cost-now"><span>p</span></p>
+            <p>Экономия <span class="benefit"></span> р за пакет </p>
+        </article>
+    </template>
+
+    <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>
