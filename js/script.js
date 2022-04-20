@@ -72,11 +72,17 @@ const cardCreate = (item) => {
         const adElement = similarTemplateAdElement.cloneNode(true);
         const quantityElement = adElement.querySelector('.quantity');
         const withoutDiscountElement = adElement.querySelector('.without-discount');
+        const withoutDiscountRowElement = adElement.querySelector('.row-item.without');
         const costNowElement = adElement.querySelector('.cost-now');
         const benefitElement = adElement.querySelector('.benefit');
+        const economyElement = adElement.querySelector('.economy');
         quantityElement.textContent = item.positions[i].quantity;
         withoutDiscountElement.textContent = item.positions[i].costWithoutDiscount;
         costNowElement.textContent = item.positions[i].cost;
+        if((item.positions[i].costWithoutDiscount)<=(item.positions[i].cost)){
+            withoutDiscountRowElement.style.display = 'none';
+            economyElement.style.display = 'none';
+        }
         benefitElement.textContent = (item.positions[i].costWithoutDiscount) - (item.positions[i].cost);
         mainContainerElement.appendChild(adElement);
     };
