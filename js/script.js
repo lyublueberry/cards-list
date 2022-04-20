@@ -8,7 +8,7 @@ import {
 let valueSentData;
 btnEnterElement.addEventListener('click', (evt) => {
     evt.preventDefault();
-    valueSentData = inputParametrElement.value;
+    valueSentData = inputParametrElement.value.toLowerCase();
     addCardsInMarker();
 });
 
