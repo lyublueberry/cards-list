@@ -24,6 +24,7 @@ ul li a {
 }
 
 .card-item {
+    flex: 0 1 15%;
     background-color: #ffffff;
     margin-right: 15px;
     padding: 10px;
