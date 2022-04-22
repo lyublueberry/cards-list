@@ -1,7 +1,7 @@
 import {
     valueTarifNoNativeSpeakerPremium, valueTarifNotNativeSpeakerPartialAutoLesson, valueTarifNotNativeSpeaker, valueTarifNativeSpeaker,
     inputParametrElement, btnEnterElement, LINK_REQUEST,
-    russianTeachBtnElement, premiumTtarifBtnElement, additionalPracticeBtnElement, englishTtechBtnElement, similarTemplateAdElement, 
+    russianTeachBtnElement, premiumTtarifBtnElement, additionalPracticeBtnElement, englishTtechBtnElement, similarTemplateAdElement,
     mainContainerElement, SHOW_ALERT_TIME
 } from './const.js';
 
@@ -76,10 +76,12 @@ const cardCreate = (item) => {
         const costNowElement = adElement.querySelector('.cost-now');
         const benefitElement = adElement.querySelector('.benefit');
         const economyElement = adElement.querySelector('.economy');
+        const wordElement = adElement.querySelector('.word');
         quantityElement.textContent = item.positions[i].quantity;
         withoutDiscountElement.textContent = item.positions[i].costWithoutDiscount;
         costNowElement.textContent = item.positions[i].cost;
-        if((item.positions[i].costWithoutDiscount)<=(item.positions[i].cost)){
+        wordElement.textContent = declination(item.positions[i].quantity, ['урок', 'урока', 'уроков']);
+        if ((item.positions[i].costWithoutDiscount) <= (item.positions[i].cost)) {
             withoutDiscountRowElement.style.display = 'none';
             economyElement.style.display = 'none';
         }
@@ -105,3 +107,4 @@ const formationTariffСards = (elem, dataArray) => {
     });
 };
 
+const declination = (number, txt, cases = [2, 0, 1, 1, 1, 2]) => txt[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
