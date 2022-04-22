@@ -12,10 +12,20 @@ ul li {
 ul li a {
     display: flex;
     text-decoration: none;
-    background-color: aliceblue;
+    background-color: #1a1a1a;
     padding: 10px;
+    border-radius: 4px;
+    color: #ffffff;
 }
 
+ul li a:hover,
+ul li a:active {
+    background-color: #333333;
+}
+.quantity {
+    font-size: 64px;
+    margin-right: 10px;
+}
 .russian-teach,
 .premium-tarif,
 .additional-practice,
@@ -23,15 +33,43 @@ ul li a {
     display: none;
 }
 
+.without-discount {
+    color: #888888;
+    font-size: 34px;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.cost-now {
+    margin-right: 10px;
+}
+.cost-now,
+.row-item span {
+    font-size: 34px;
+}
+.economy,
+.economy span {
+    color: #888888;
+    font-size: 18px;
+}
+
+ul li a img {
+    margin: 0 15px;
+}
 .card-item {
-    flex: 0 1 15%;
-    background-color: #ffffff;
+    background-color: #1a1a1a;
     margin-right: 15px;
     padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    min-height: 300px;
+    border-radius: 10px;
+    color: #ffffff;
 }
 
 .main {
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .row-item {
     display: flex;
